@@ -4,8 +4,11 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  database: gmpe_logs
+  username: gmpe_logs
+  password: l0gg3r
+  host: localhost
   pool: 5
   timeout: 5000
 
