@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>IP Address</th>
       <th>Created</th>
     </tr>
@@ -10,6 +11,7 @@
   <tbody>
     <% @logs.each do |log| %>
       <tr>
+        <td><%= log.name %></td>
         <td><%= log.ip_address %></td>
         <td><%= log.created_at %></td>
         <td><%= link_to "View", log_path(log) %></td>

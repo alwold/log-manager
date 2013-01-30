@@ -18,6 +18,17 @@ class LogsController < ApplicationController
     render :text => @log.log_file, :content_type => "text/plain"
   end
 
+  def edit
+    @log = Log.find(params[:id])
+  end
+
+  def update
+    @log = Log.find(params[:id])
+    @log.update_attributes!(params[:log])
+    
+    redirect_to logs_path
+  end
+
   def destroy
     @log = Log.find(params[:id])
     @log.destroy
