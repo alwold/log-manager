@@ -11,13 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126234221) do
+ActiveRecord::Schema.define(:version => 20130130050703) do
 
   create_table "logs", :force => true do |t|
     t.string   "ip_address"
     t.binary   "log_file"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "name"
+    t.string   "description"
   end
 
 end
